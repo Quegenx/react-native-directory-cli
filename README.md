@@ -21,17 +21,64 @@ Candidates matching @react-native-async-storage/async-storage:
 
 ## Install
 
+### The CLI
+
+**macOS / Linux — prebuilt binary (recommended once a release is tagged):**
+
 ```bash
+curl --proto '=https' --tlsv1.2 -LsSf https://github.com/Quegenx/react-native-directory-cli/releases/latest/download/rnd-installer.sh | sh
+```
+
+**Windows — PowerShell installer:**
+
+```powershell
+powershell -ExecutionPolicy ByPass -c "irm https://github.com/Quegenx/react-native-directory-cli/releases/latest/download/rnd-installer.ps1 | iex"
+```
+
+**Any platform — build from source with Rust:**
+
+```bash
+git clone https://github.com/Quegenx/react-native-directory-cli
+cd react-native-directory-cli
 cargo install --path .
 ```
 
-Add `~/.cargo/bin` to your `$PATH` if it isn't already:
+Make sure `~/.cargo/bin` (or `%USERPROFILE%\.cargo\bin` on Windows) is on your `$PATH`:
+
+| Shell | Add to |
+|---|---|
+| bash | `~/.bashrc` — `export PATH="$HOME/.cargo/bin:$PATH"` |
+| zsh | `~/.zshrc` — `export PATH="$HOME/.cargo/bin:$PATH"` |
+| fish | `~/.config/fish/config.fish` — `fish_add_path ~/.cargo/bin` |
+| PowerShell | `$PROFILE` — `$env:Path += ";$HOME\.cargo\bin"` |
+
+Verify with:
 
 ```bash
-export PATH="$HOME/.cargo/bin:$PATH"
+rnd --version
 ```
 
-Prebuilt binaries via `cargo-dist` / GitHub Releases coming soon.
+### The AI-agent skill
+
+Teaches Claude Code, Codex, Cursor, Windsurf, and 40+ other agents how to use `rnd`. Install with the [Vercel skills CLI](https://skills.sh):
+
+```bash
+npx skills add Quegenx/react-native-directory-cli
+```
+
+This installs the skill to your project's `.agents/skills/` directory. It'll trigger automatically when you discuss RN/Expo packages, audit dependencies, or ask about alternatives.
+
+Works on macOS, Linux, and Windows (Node.js required).
+
+### Both at once
+
+```bash
+# CLI
+cargo install --git https://github.com/Quegenx/react-native-directory-cli rnd
+
+# Skill
+npx skills add Quegenx/react-native-directory-cli
+```
 
 ## Commands
 
