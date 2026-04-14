@@ -1,0 +1,10 @@
+{
+  "version": "1.0.0",
+  "organization": "Quegenx",
+  "date": "April 2026",
+  "abstract": "Teaches AI agents how to use the `rnd` CLI to query the React Native Directory and audit React Native / Expo projects. Covers when to invoke `rnd`, how to interpret the four match-tiers of `alternatives`, and how to read `analyze` output — especially the `alternatives_in_project` field which shows packages already in the user's package.json that could replace a flagged dep.",
+  "references": [
+    "https://github.com/Quegenx/react-native-directory-cli",
+    "https://reactnative.directory"
+  ]
+}
