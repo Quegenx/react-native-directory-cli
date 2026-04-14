@@ -4,13 +4,23 @@ Query [reactnative.directory](https://reactnative.directory) and audit React Nat
 
 ## Quick start
 
-```bash
-# Install the CLI (any platform with Rust)
-cargo install --git https://github.com/Quegenx/react-native-directory-cli rnd
+Pick your favorite package manager:
 
-# Install the AI-agent skill (works in 45+ agents)
+```bash
+# Homebrew (macOS / Linux)
+brew install Quegenx/tap/rnd
+
+# npm / npx / bunx (any platform with Node)
+npx react-native-directory-cli
+
+# Cargo (any platform with Rust)
+cargo install react-native-directory-cli
+
+# Or install the AI-agent skill for Claude Code / Codex / Cursor / 40+ agents
 npx skills add Quegenx/react-native-directory-cli
 ```
+
+All of the above install the `rnd` binary. Run `rnd --help` to get started.
 
 Then try:
 
@@ -35,27 +45,25 @@ Candidates matching @react-native-async-storage/async-storage:
 
 ### The CLI
 
-**macOS / Linux — prebuilt binary (recommended once a release is tagged):**
+Pick whichever you already use:
+
+| Tool | Command | Notes |
+|---|---|---|
+| **Homebrew** | `brew install Quegenx/tap/rnd` | macOS + Linux |
+| **npm** | `npm install -g react-native-directory-cli` | global install |
+| **npx / bunx** | `npx react-native-directory-cli` | no install, runs once |
+| **Cargo** | `cargo install react-native-directory-cli` | needs Rust toolchain |
+| **Shell installer** | `curl -LsSf https://github.com/Quegenx/react-native-directory-cli/releases/latest/download/rnd-installer.sh \| sh` | macOS / Linux |
+| **PowerShell installer** | `powershell -ExecutionPolicy ByPass -c "irm https://github.com/Quegenx/react-native-directory-cli/releases/latest/download/rnd-installer.ps1 \| iex"` | Windows |
+| **From source** | `git clone ... && cd ... && cargo install --path .` | any platform with Rust |
+
+All paths install the `rnd` binary. Verify:
 
 ```bash
-curl --proto '=https' --tlsv1.2 -LsSf https://github.com/Quegenx/react-native-directory-cli/releases/latest/download/rnd-installer.sh | sh
+rnd --version
 ```
 
-**Windows — PowerShell installer:**
-
-```powershell
-powershell -ExecutionPolicy ByPass -c "irm https://github.com/Quegenx/react-native-directory-cli/releases/latest/download/rnd-installer.ps1 | iex"
-```
-
-**Any platform — build from source with Rust:**
-
-```bash
-git clone https://github.com/Quegenx/react-native-directory-cli
-cd react-native-directory-cli
-cargo install --path .
-```
-
-Make sure `~/.cargo/bin` (or `%USERPROFILE%\.cargo\bin` on Windows) is on your `$PATH`:
+If `rnd: command not found` after `cargo install`, add `~/.cargo/bin` to your `$PATH`:
 
 | Shell | Add to |
 |---|---|
@@ -63,12 +71,6 @@ Make sure `~/.cargo/bin` (or `%USERPROFILE%\.cargo\bin` on Windows) is on your `
 | zsh | `~/.zshrc` — `export PATH="$HOME/.cargo/bin:$PATH"` |
 | fish | `~/.config/fish/config.fish` — `fish_add_path ~/.cargo/bin` |
 | PowerShell | `$PROFILE` — `$env:Path += ";$HOME\.cargo\bin"` |
-
-Verify with:
-
-```bash
-rnd --version
-```
 
 ### The AI-agent skill
 

@@ -1,5 +1,5 @@
 [package]
-name = "rnd"
+name = "react-native-directory-cli"
 version = "0.1.0"
 edition = "2024"
 description = "React Native Directory CLI — query 2400+ RN packages from the terminal"
