@@ -4,6 +4,11 @@ version = "0.1.0"
 edition = "2024"
 description = "React Native Directory CLI — query 2400+ RN packages from the terminal"
 license = "MIT"
+repository = "https://github.com/Quegenx/react-native-directory-cli"
+homepage = "https://github.com/Quegenx/react-native-directory-cli"
+readme = "README.md"
+keywords = ["react-native", "expo", "cli", "directory", "packages"]
+categories = ["command-line-utilities", "development-tools"]
 
 [[bin]]
 name = "rnd"
@@ -27,3 +32,8 @@ walkdir = "2"
 lto = "thin"
 codegen-units = 1
 strip = true
+
+# The profile that 'dist' will build with
+[profile.dist]
+inherits = "release"
+lto = "thin"
