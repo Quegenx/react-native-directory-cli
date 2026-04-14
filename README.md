@@ -1,6 +1,18 @@
 # rnd — React Native Directory CLI
 
-Query [reactnative.directory](https://reactnative.directory) and audit React Native projects from the terminal. Designed for AI agents (Claude Code, Codex) and humans alike.
+Query [reactnative.directory](https://reactnative.directory) and audit React Native projects from the terminal. Designed for AI agents (Claude Code, Codex, Cursor, Windsurf) and humans alike.
+
+## Quick start
+
+```bash
+# Install the CLI (any platform with Rust)
+cargo install --git https://github.com/Quegenx/react-native-directory-cli rnd
+
+# Install the AI-agent skill (works in 45+ agents)
+npx skills add Quegenx/react-native-directory-cli
+```
+
+Then try:
 
 ```
 $ rnd alternatives @react-native-async-storage/async-storage --limit 3
@@ -180,6 +192,28 @@ The directory dump (~2.4 MB, 2,419 packages) is cached for 24 hours at your OS c
 - Windows: `%LOCALAPPDATA%\rnd\rnd\cache\libraries.json`
 
 Bypass with `--refresh`, inspect with `rnd cache info`, clear with `rnd cache clear`.
+
+## Repository layout
+
+Everything in the repo has a purpose — here's a quick map for the curious:
+
+```
+react-native-directory-cli/
+├── src/                        Rust source (main binary + modules)
+├── Cargo.toml / Cargo.lock     Rust package manifest + lockfile
+├── README.md                   You are here
+├── dist-workspace.toml         cargo-dist config for releases
+├── .github/workflows/
+│   └── release.yml             CI: builds binaries for macOS/Linux/Windows on tag push
+├── .claude/skills/rnd-cli/
+│   └── SKILL.md                Skill for local Claude Code discovery
+└── skills/rnd-cli/
+    ├── SKILL.md                Same skill, at the Vercel skills CLI convention path
+    ├── metadata.json           Skill metadata
+    └── README.md               Skill-specific docs
+```
+
+The two `SKILL.md` files are intentionally duplicated — each sits where its ecosystem expects to find it. They should be kept in sync.
 
 ## License
 
