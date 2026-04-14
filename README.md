@@ -177,6 +177,7 @@ The directory dump (~2.4 MB, 2,419 packages) is cached for 24 hours at your OS c
 
 - macOS: `~/Library/Caches/dev.rnd.rnd/libraries.json`
 - Linux: `~/.cache/rnd/libraries.json`
+- Windows: `%LOCALAPPDATA%\rnd\rnd\cache\libraries.json`
 
 Bypass with `--refresh`, inspect with `rnd cache info`, clear with `rnd cache clear`.
 
