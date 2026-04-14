@@ -40,8 +40,8 @@ Candidates matching @react-native-async-storage/async-storage:
 | Tool | Command | Notes |
 |---|---|---|
 | **Cargo** | `cargo install react-native-directory-cli` | any platform with Rust |
-| **Shell installer** | `curl -LsSf https://github.com/Quegenx/react-native-directory-cli/releases/latest/download/rnd-installer.sh \| sh` | macOS / Linux (available after first tag) |
-| **PowerShell installer** | `powershell -ExecutionPolicy ByPass -c "irm https://github.com/Quegenx/react-native-directory-cli/releases/latest/download/rnd-installer.ps1 \| iex"` | Windows (available after first tag) |
+| **Shell installer** | `curl -LsSf https://github.com/Quegenx/react-native-directory-cli/releases/latest/download/react-native-directory-cli-installer.sh \| sh` | macOS / Linux (available after first tag) |
+| **PowerShell installer** | `powershell -ExecutionPolicy ByPass -c "irm https://github.com/Quegenx/react-native-directory-cli/releases/latest/download/react-native-directory-cli-installer.ps1 \| iex"` | Windows (available after first tag) |
 | **From source** | `git clone https://github.com/Quegenx/react-native-directory-cli && cd react-native-directory-cli && cargo install --path .` | any platform |
 
 All paths install the `rnd` binary. Verify:
