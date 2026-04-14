@@ -4,23 +4,15 @@ Query [reactnative.directory](https://reactnative.directory) and audit React Nat
 
 ## Quick start
 
-Pick your favorite package manager:
-
 ```bash
-# Homebrew (macOS / Linux)
-brew install Quegenx/tap/rnd
-
-# npm / npx / bunx (any platform with Node)
-npx react-native-directory-cli
-
 # Cargo (any platform with Rust)
 cargo install react-native-directory-cli
 
-# Or install the AI-agent skill for Claude Code / Codex / Cursor / 40+ agents
+# Or the AI-agent skill for Claude Code / Codex / Cursor / 40+ agents
 npx skills add Quegenx/react-native-directory-cli
 ```
 
-All of the above install the `rnd` binary. Run `rnd --help` to get started.
+Run `rnd --help` to get started.
 
 Then try:
 
@@ -45,17 +37,12 @@ Candidates matching @react-native-async-storage/async-storage:
 
 ### The CLI
 
-Pick whichever you already use:
-
 | Tool | Command | Notes |
 |---|---|---|
-| **Homebrew** | `brew install Quegenx/tap/rnd` | macOS + Linux |
-| **npm** | `npm install -g react-native-directory-cli` | global install |
-| **npx / bunx** | `npx react-native-directory-cli` | no install, runs once |
-| **Cargo** | `cargo install react-native-directory-cli` | needs Rust toolchain |
-| **Shell installer** | `curl -LsSf https://github.com/Quegenx/react-native-directory-cli/releases/latest/download/rnd-installer.sh \| sh` | macOS / Linux |
-| **PowerShell installer** | `powershell -ExecutionPolicy ByPass -c "irm https://github.com/Quegenx/react-native-directory-cli/releases/latest/download/rnd-installer.ps1 \| iex"` | Windows |
-| **From source** | `git clone ... && cd ... && cargo install --path .` | any platform with Rust |
+| **Cargo** | `cargo install react-native-directory-cli` | any platform with Rust |
+| **Shell installer** | `curl -LsSf https://github.com/Quegenx/react-native-directory-cli/releases/latest/download/rnd-installer.sh \| sh` | macOS / Linux (available after first tag) |
+| **PowerShell installer** | `powershell -ExecutionPolicy ByPass -c "irm https://github.com/Quegenx/react-native-directory-cli/releases/latest/download/rnd-installer.ps1 \| iex"` | Windows (available after first tag) |
+| **From source** | `git clone https://github.com/Quegenx/react-native-directory-cli && cd react-native-directory-cli && cargo install --path .` | any platform |
 
 All paths install the `rnd` binary. Verify:
 
